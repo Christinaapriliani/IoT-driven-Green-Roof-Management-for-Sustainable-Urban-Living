@@ -1,0 +1,10 @@
+version: '3'
+services:
+  eureka-server:
+    image: openjdk:8-jre-alpine
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    volumes:
+      - ./path-to-your-eureka-server-jar:/app
+    command: ["java", "-jar", "eureka-server.jar"]
